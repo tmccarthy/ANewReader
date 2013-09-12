@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FeedListItemRoot">
+
+    <TextView
+            android:id="@+id/feed_layout_feed_name"
+        android:text=""
+        style="@style/FeedListItemFeedName" />
+
+    <TextView
+            android:id="@+id/feed_layout_feed_unread_count"
+        android:text=""
+        style="@style/FeedListItemUnreadCount" />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ItemDetailRoot">
+
+    <ScrollView style="@style/ItemDetailContentScrollView">
+
+        <LinearLayout style="@style/ItemDetailContentRoot">
+
+            <TextView
+                android:id="@+id/item_detail_title"
+                style="@style/ItemDetailContentItemTitle" />
+
+            <TextView
+                android:id="@+id/item_detail_subscription_title"
+                style="@style/ItemDetailContentSubscriptionTitle" />
+
+            <TextView
+                android:id="@+id/item_detail_content"
+                style="@style/ItemDetailItemContentSummary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <CheckBox
+        android:text="@string/mark_as_read"
+        android:id="@+id/item_detail_mark_as_read_checkbox"
+        style="@style/ItemDetailAsReadCheckbox" />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AuthenticateActivityRoot">
+
+    <LinearLayout style="@style/AuthenticateActivityReaderServiceSpinnerRow">
+
+        <TextView
+            android:text="@string/reader_service"
+            android:id="@+id/service_type_label"
+            style="@style/AuthenticateActivityReaderServiceLabel" />
+
+        <Spinner
+            android:id="@+id/predefined_reader_service_spinner"
+            style="@style/AuthenticateActivityReaderServiceSpinner" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/AuthenticateActivityUsernameRow">
+
+        <TextView
+            android:text="@string/username"
+            android:id="@+id/service_username_label"
+            style="@style/AuthenticateActivityUsernameLabel" />
+
+        <EditText
+            android:id="@+id/authenticate_username_editText"
+            style="@style/AuthenticateActivityUsernameEditText" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/AuthenticateActivityPasswordRow">
+
+        <TextView
+            android:text="@string/password"
+            android:id="@+id/service_password_label"
+            style="@style/AuthenticateActivityPasswordLabel" />
+
+        <EditText
+            android:id="@+id/authenticate_password_editText"
+            style="@style/AuthenticateActivityPasswordEditText" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/AuthenticateActivitySubmitButtonRow">
+
+        <Button
+            android:text="@string/login"
+            android:id="@+id/button_login"
+            style="@style/AuthenticateActivitySubmitButton" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authentication_progress_layout"
+        style="@style/AuthenticateActivityProgressRow">
+
+        <ProgressBar
+            android:id="@+id/authentication_progressBar"
+            style="@style/AuthenticateActivityProgressBar" />
+
+        <TextView
+            android:text="@string/authenticating"
+            android:id="@id/authenticating"
+            style="@style/AuthenticateActivityProgressLabel" />
+
+    </LinearLayout>
+
+</LinearLayout>

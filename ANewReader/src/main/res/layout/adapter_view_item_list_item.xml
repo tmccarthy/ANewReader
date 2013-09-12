@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_list_item_layout_root"
+    style="@style/ItemListItemRoot">
+
+    <TextView
+            android:id="@+id/item_list_item_layout_subscription_title"
+        android:text=""
+        style="@style/ItemListItemTitle" />
+
+    <TextView
+        android:text=""
+            android:id="@+id/item_list_item_layout_date"
+        style="@style/ItemListItemDate" />
+
+    <TextView
+        android:text=""
+        android:id="@+id/item_list_item_layout_title"
+        style="@style/ItemListItemSubscriptionTitle" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">A New Reader</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_testing">Testing</string>
+    <string name="title_activity_item_list">Item List Activity</string>
+    <string name="all_items">All Items</string>
+    <string name="connection_error">Connection error: </string>
+    <string name="authenticating">Authenticating</string>
+    <string name="retrieving_categories">Retrieving categories</string>
+    <string name="feed_load_error_message">Error loading feeds \n Tap to try again</string>
+    <string name="refresh_icon">Refresh Icon</string>
+    <string name="title_activity_item_view">Item View Activity</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="authenticated">Authenticated</string>
+    <string name="downloading_feeds">Downloading feeds</string>
+    <string name="feeds_downloaded">Feeds downloaded</string>
+    <string name="authentication_error_message">Error authentication \n Tap to try again</string>
+    <string name="rendering_feeds">Rendering feeds</string>
+    <string name="ellipses">…</string>
+    <string name="loading_more_items">Loading more items</string>
+    <string name="title_activity_authenticate">Authenticate Activity</string>
+    <string name="reader_service">Reader Service</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="authentication_failed">Authentication failed</string>
+
+</resources>

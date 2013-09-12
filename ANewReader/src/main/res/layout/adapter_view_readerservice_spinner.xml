@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ReaderServiceSpinnerItemRoot">
+
+    <TextView
+        android:text="@string/reader_service"
+        android:id="@+id/readerservice_spinner_title"
+        style="@style/ReaderServiceSpinnerItemTitle" />
+
+    <TextView
+        android:id="@+id/readerservice_spinner_base_url"
+        style="@style/ReaderServiceSpinnerItemUrl" />
+
+</LinearLayout>

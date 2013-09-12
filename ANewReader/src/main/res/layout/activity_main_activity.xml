@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_parent"
+    style="@style/MainActivityParent">
+
+    <LinearLayout
+        android:id="@+id/main_activity_error_panel"
+        style="@style/MainActivityErrorPanel">
+
+        <ImageView
+            android:id="@+id/main_activity_error_panel_image"
+            android:contentDescription="@string/refresh_icon"
+            style="@style/MainActivityErrorPanelImage"/>
+
+        <TextView
+            android:id="@+id/main_activity_error_panel_text"
+            style="@style/mainActivityErrorPanelText"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout_parent"
+        style="@style/MainActivityDrawer">
+
+        <ListView
+            android:id="@+id/item_list"
+            style="@style/MainActivityItemList" />
+
+        <ListView
+            android:id="@+id/drawer_layout_feed_list"
+            style="@style/MainActivityFeedList" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
