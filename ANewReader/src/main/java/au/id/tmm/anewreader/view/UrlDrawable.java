@@ -18,18 +18,25 @@
 
 package au.id.tmm.anewreader.view;
 
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+
 /**
- * Listener interface for the display feeds, defining methods to be called on certain events
- * pertaining to the list of feeds to display.
+ * Represents a Drawable received from a url.
  */
-public interface DisplayFeedsListener {
+public class UrlDrawable extends BitmapDrawable {
 
-    public void onPopulatePreExecute();
+    private Drawable drawable;
 
-    public void onPopulateProgress(DisplayFeeds.PopulateProgress progress);
+    @Override
+    public void draw(Canvas canvas) {
+        if (drawable != null) {
+            drawable.draw(canvas);
+        }
+    }
 
-    public void onPopulateComplete();
-
-    public void onPopulateError(Throwable cause);
-
+    public void setDrawable(Drawable drawable) {
+        this.drawable = drawable;
+    }
 }
