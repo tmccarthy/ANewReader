@@ -22,9 +22,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 import au.id.tmm.anewreader.R;
 import au.id.tmm.anewreader.model.Account;
@@ -35,7 +34,7 @@ public class DisplayFeeds {
     private static final String POPULATE_ON_NO_FEED_ERROR_MESSAGE = "Illegal state, populate called" +
             "when no feed has been set.";
 
-    private Set<DisplayFeedsListener> listeners = new HashSet<DisplayFeedsListener>();
+    private List<DisplayFeedsListener> listeners = new LinkedList<DisplayFeedsListener>();
 
     private boolean loadingFeeds = false;
 
@@ -125,5 +124,21 @@ public class DisplayFeeds {
 
     public boolean isLoadingFeeds() {
         return loadingFeeds;
+    }
+
+    /**
+     * Listener interface for the display feeds, defining methods to be called on certain events
+     * pertaining to the list of feeds to display.
+     */
+    public static interface DisplayFeedsListener {
+
+        public void onPopulatePreExecute();
+
+        public void onPopulateProgress(PopulateProgress progress);
+
+        public void onPopulateComplete();
+
+        public void onPopulateError(Throwable cause);
+
     }
 }

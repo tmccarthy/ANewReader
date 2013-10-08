@@ -20,6 +20,7 @@ package au.id.tmm.anewreader.utility.network;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Collection;
 
 /**
  * Interface defining the functionality of a RequestHelper. A RequestHelper simplifies the process
@@ -33,6 +34,15 @@ public interface RequestHelper {
      * @throws URISyntaxException
      */
     public String performGetRequest(String uri)
+            throws IOException, URISyntaxException;
+
+    /**
+     * Perform a POST request of the given URI, providing the given parameter-value pairs as the
+     * body of the request.
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    public String performPostRequest(String uri, Collection<ParamValuePair> pairs)
             throws IOException, URISyntaxException;
 
     /**
@@ -59,7 +69,16 @@ public interface RequestHelper {
      * @throws IOException
      * @throws URISyntaxException
      */
-    public String performPutRequest(String uri, ParamValuePair ... pairs)
+    public String performPutRequest(String uri, Collection<ParamValuePair> pairs)
+            throws IOException, URISyntaxException;
+
+    /**
+     * Perform a PUT request of the given URI, providing the given parameter-value pairs as the
+     * body of the request.
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    public String performPutRequest(String uri, ParamValuePair... pairs)
             throws IOException, URISyntaxException;
 
     /**

@@ -21,6 +21,7 @@ package au.id.tmm.anewreader.view;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +64,10 @@ public class ItemDetailFragment extends Fragment {
                 item.getParentSubscription().getHtmlUrl())));
         subscriptionTitle.setMovementMethod(LinkMovementMethod.getInstance());
 
-        content.setText(Html.fromHtml(item.getSummary()));
+        UrlImageGetter imageGetter = new UrlImageGetter(content, this.getActivity());
+
+        Spanned htmlSpan = Html.fromHtml(item.getSummary(), imageGetter, null);
+        content.setText(htmlSpan);
         content.setMovementMethod(LinkMovementMethod.getInstance());
 
         return view;

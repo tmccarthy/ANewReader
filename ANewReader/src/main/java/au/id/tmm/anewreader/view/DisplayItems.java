@@ -21,9 +21,8 @@ package au.id.tmm.anewreader.view;
 import android.os.AsyncTask;
 
 import java.util.Date;
-import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 import au.id.tmm.anewreader.model.Continuation;
 import au.id.tmm.anewreader.model.Feed;
@@ -44,7 +43,7 @@ public class DisplayItems {
 
     private static final int DEFAULT_NUM_ITEMS_PER_LOAD = 20;
 
-    private Set<DisplayItemsListener> listeners = new HashSet<DisplayItemsListener>();
+    private List<DisplayItemsListener> listeners = new LinkedList<DisplayItemsListener>();
 
     private boolean loadingItems = false;
 
@@ -314,4 +313,45 @@ public class DisplayItems {
     public enum LoadMoreProgress {}
 
     public enum RefreshProgress {}
+
+    /**
+     * Interface for listeners of the display Items list.
+     */
+    public static interface DisplayItemsListener {
+
+        // Populating
+
+        public void onPopulatePreExecute();
+
+        public void onPopulateProgress(PopulateProgress progress);
+
+        public void onPopulateComplete();
+
+        public void onPopulateError(Throwable cause);
+
+        // Loading more
+
+        public void onLoadMoreItemsPreExecute();
+
+        public void onLoadMoreItemsProgress(LoadMoreProgress progress);
+
+        public void onLoadMoreItemsComplete(List<Item> newItems);
+
+        public void onLoadMoreItemsError(Throwable cause);
+
+        // Refreshing
+
+        public void onRefreshPreExecute();
+
+        public void onRefreshProgress(RefreshProgress progress);
+
+        public void onRefreshComplete();
+
+        public void onRefreshError(Throwable cause);
+
+        // Change of feed
+
+        public void onChangeFeed();
+
+    }
 }

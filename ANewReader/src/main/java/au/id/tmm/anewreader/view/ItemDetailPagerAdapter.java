@@ -50,7 +50,7 @@ public class ItemDetailPagerAdapter extends FragmentStatePagerAdapter {
      * Listener for changes in the list of displayed Items, so that such changes can be represented
      * in the Activity.
      */
-    private DisplayItemsListener displayItemsListener = new DisplayItemsListener() {
+    private DisplayItems.DisplayItemsListener displayItemsListener = new DisplayItems.DisplayItemsListener() {
 
         @Override
         public void onPopulatePreExecute() {

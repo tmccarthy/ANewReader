@@ -26,6 +26,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -112,6 +113,12 @@ public class ReaderServiceRequestHelper implements RequestHelper {
         }
     }
 
+    @Override
+    public String performPostRequest(String uri, Collection<ParamValuePair> pairs)
+            throws IOException, URISyntaxException {
+        return this.performPostRequest(uri, pairs);
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -152,6 +159,11 @@ public class ReaderServiceRequestHelper implements RequestHelper {
         } finally {
             urlConnection.disconnect();
         }
+    }
+
+    @Override
+    public String performPutRequest(String uri, Collection<ParamValuePair> pairs) throws IOException, URISyntaxException {
+        return null;
     }
 
     /**

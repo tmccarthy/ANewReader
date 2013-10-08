@@ -287,7 +287,7 @@ public class MainActivity extends FragmentActivity {
      * DisplayFeedsListener for handling changes in the displayed Feeds. This object is registered
      * as a listener in the onCreate method.
      */
-    private DisplayFeedsListener displayFeedsListener = new DisplayFeedsListener() {
+    private DisplayFeeds.DisplayFeedsListener displayFeedsListener = new DisplayFeeds.DisplayFeedsListener() {
         @Override
         public void onPopulatePreExecute() {
             // TODO show progressbar in drawer
@@ -321,7 +321,7 @@ public class MainActivity extends FragmentActivity {
      * DisplayItemsListener for handling changes to the displayed Items. This object is registered
      * as a listener in the onCreate method.
      */
-    private DisplayItemsListener displayItemsListener = new DisplayItemsListener() {
+    private DisplayItems.DisplayItemsListener displayItemsListener = new DisplayItems.DisplayItemsListener() {
 
         @Override
         public void onPopulatePreExecute() {
